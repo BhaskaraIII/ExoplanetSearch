@@ -1,0 +1,50 @@
+.fullscreen-bg {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.scroll-down-arrow {
+    font-size: 100px;
+    color: rgb(196, 196, 196);
+    text-decoration: none;
+    transform: rotate(90deg);
+    position: absolute;
+    bottom: 30px;
+    left: 50%
+}
+
+body {
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;    
+}
+
+
+p {
+    color: green;
+}
+
+.full-page-block {
+    height: 100vh; /* Обязательно: строго на весь экран */
+    width: 100%;
+    
+    /* Вторая картинка, которая будет подниматься */
+    background-image: url('images/photo2.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Чтобы картинка внутри тоже красиво стояла, пока блок ползет */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
