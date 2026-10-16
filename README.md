@@ -1,1 +1,1 @@
-# ProjectExoplanet
+# ExoplanetSearchProject
