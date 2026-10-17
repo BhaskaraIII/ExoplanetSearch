@@ -61,7 +61,7 @@ body {
     gap: 20px;
 }
 
-.autors-container {
+.authors-container {
     display: flex;
     justify-content: space-between; /* Прижимает первый элемент влево, второй — вправо */
     width: 80%;                     /* Ширина зоны, в пределах которой они расходятся (можно менять) */
@@ -69,11 +69,9 @@ body {
     margin-top: 40px;               /* Отступ сверху от заголовка «Авторы» */
 }
 
-.autors {
+.authors {
     font-size: 24px;
-    color: #ffffff;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
-    
-    /* Дополнительно: можно ограничить ширину каждого блока, если текст будет длинным */
-    max-width: 40%; 
+    color: #2c3e50;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    max-width: 40%;
 }
