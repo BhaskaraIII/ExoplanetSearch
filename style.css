@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Trilobit';
+    src: url('Pablo-Co-Serif-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
 .fullscreen-bg {
     top: 0;
     left: 0;
@@ -18,7 +27,8 @@
 }
 
 body {
-   display: flex;
+    font-family: 'Trilobit', sans-serif;
+    display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
@@ -46,4 +56,8 @@ p {
 
 html {
     scroll-behavior: smooth;
+}
+
+.autors {
+    border: 500px
 }
