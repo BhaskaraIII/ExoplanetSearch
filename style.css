@@ -5,25 +5,8 @@
     font-style: normal;
 }
 
-
-
-.fullscreen-bg {
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.scroll-down-arrow {
-    font-size: 100px;
-    color: rgb(196, 196, 196);
-    text-decoration: none;
-    transform: rotate(90deg);
-    position: absolute;
-    bottom: 30px;
-    left: 50%
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -35,11 +18,34 @@ body {
     margin: 0;    
 }
 
-
-p {
-    color: green;
+.first-screen {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
+.fullscreen-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.scroll-down-arrow {
+    font-size: 100px;
+    color: rgb(196, 196, 196);
+    text-decoration: none;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg); 
+}
+
+/* Второй экран с авторами */
 .full-page-block {
     height: 100vh;
     width: 100%;
@@ -47,17 +53,27 @@ p {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    gap: 20px;
 }
 
-html {
-    scroll-behavior: smooth;
+.autors-container {
+    display: flex;
+    justify-content: space-between; /* Прижимает первый элемент влево, второй — вправо */
+    width: 80%;                     /* Ширина зоны, в пределах которой они расходятся (можно менять) */
+    max-width: 1000px;              /* Чтобы на очень больших экранах они не разъезжались слишком далеко */
+    margin-top: 40px;               /* Отступ сверху от заголовка «Авторы» */
 }
 
 .autors {
-    border: 500px
+    font-size: 24px;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    
+    /* Дополнительно: можно ограничить ширину каждого блока, если текст будет длинным */
+    max-width: 40%; 
 }
