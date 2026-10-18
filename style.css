@@ -59,19 +59,56 @@ body {
     justify-content: center;
     align-items: center;
     gap: 20px;
-}
+} 
 
 .authors-container {
     display: flex;
-    justify-content: space-between; /* Прижимает первый элемент влево, второй — вправо */
+    justify-content: center; /* Прижимает первый элемент влево, второй — вправо */
     width: 80%;                     /* Ширина зоны, в пределах которой они расходятся (можно менять) */
     max-width: 1000px;              /* Чтобы на очень больших экранах они не разъезжались слишком далеко */
     margin-top: 40px;               /* Отступ сверху от заголовка «Авторы» */
 }
 
+
+h1 {
+    font-family: 'Playfair Display', serif; /* Шрифт заголовка */
+    font-size: 56px;                        /* Крупнее, чем у авторов (24px) */
+    font-weight: 700;                       /* Жирный */
+    color: #2c3e50;                         /* Цвет (как у авторов) */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Тень, чтобы читалось на фоне картинки */
+    text-align: center;                     /* По центру */
+    margin: 0;                              /* Убираем стандартные отступы браузера */
+    letter-spacing: 2px;                    /* Чуть разрядить буквы для красоты */
+}
+
 .authors {
+    font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     color: #2c3e50;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    text-align: center;           /* ← Центрируем текст */
+    /* width: 100%;   */
     max-width: 40%;
+}
+
+
+
+
+
+.author-card {
+    display: flex;
+    flex-direction: column;   /* Элементы друг под другом */
+    align-items: center;      /* Центрируем по горизонтали */
+    gap: 15px;                /* Отступ между фото и именем */
+    max-width: 45%;  /* ← было 40%, увеличиваем */
+    min-width: 700px; 
+}
+
+
+
+.author-card img {
+    width: 200px;             /* Фиксированная ширина */
+    height: auto;             /* Высота подстроится автоматически — фото не обрежется */
+    border-radius: 10px;      /* Лёгкое скругление углов (можно убрать совсем) */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
